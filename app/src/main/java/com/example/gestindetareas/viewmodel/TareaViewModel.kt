@@ -7,6 +7,7 @@ import com.tuempresa.gestiontareas.data.DataSource
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 
 class TareaViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(TareaUiState())
@@ -31,9 +32,16 @@ class TareaViewModel : ViewModel() {
     }
 
     fun cambiarEstadoTareas(id:Int){
-        // Pendiente: Lógica para buscar la tarea, invertir su estado, usando .map { } para listas y el .copy() del estado
+        //Usando update para aprender a usarlo
+        _uiState.update{ estadoActual ->
+            // Pendiente: Lógica para buscar la tarea, invertir su estado, usando .map { } para listas y el .copy() del estado
+            val listaNueva = _uiState.value.tareas.map{
+                if(it.id == id) it.copy(completado = !it.completado) else it}
+            // recalcular pendientes y emitir el nuevo UiState usando .copy()
+            val pendientesNuevos = listaNueva.count{!it.completado}
 
-        // recalcular pendientes y emitir el nuevo UiState usando .copy()
+            estadoActual.copy(tareas = listaNueva, contador = pendientesNuevos)
+        }
 
     }
 }
