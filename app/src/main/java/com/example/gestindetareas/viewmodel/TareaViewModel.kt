@@ -1,7 +1,6 @@
 package com.example.gestindetareas.viewmodel
 
 import androidx.lifecycle.ViewModel
-import androidx.room.util.copy
 import com.example.gestindetareas.model.TareaUiState
 import com.tuempresa.gestiontareas.data.DataSource
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,13 +20,13 @@ class TareaViewModel : ViewModel() {
 
     fun cargarTareasIniciales(){
         //Cargo las tareas del DataSource en una variable local
-        val tareasPrimeras = DataSource.listaTareas
+        val tareasPrimarias = DataSource.listaTareas
 
         //Guardo la información de las tareas pendientes
-        val numPendientes = tareasPrimeras.count{!it.completado}
+        val numPendientes = tareasPrimarias.count{!it.completado}
 
         //Pasandosela al _uiState
-        _uiState.value = _uiState.value.copy(tareas = tareasPrimeras, contador = numPendientes)
+        _uiState.value = _uiState.value.copy(tareas = tareasPrimarias, contador = numPendientes)
 
     }
 

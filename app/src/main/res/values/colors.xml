@@ -12,5 +12,6 @@
     <color name="color_letra_normal">#28326D</color>
     <color name="color_aprobado">#09BC25</color>
     <color name="color_letra_pendiente">#FF405A</color>
+    <color name="colo_fondo_topBar">#D7995B</color>
 
 </resources>
