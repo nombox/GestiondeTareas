@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Gestión de Tareas</string>
+    <string name="fecha_tope">Fecha tope: %1$s</string>
 </resources>
