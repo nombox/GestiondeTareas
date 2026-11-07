@@ -29,9 +29,12 @@ fun Tarjeta(
     modifier: Modifier = Modifier,
     onClick: (Int) -> Unit
 ) {
-//Variable para controlar los estilos según el estado de la tarjeta
-    val estiloCard = if(tarea.completado) colorResource(R.color.color_tarjeta) else Color.Transparent
-    val estiloTexto = if(tarea.completado)  colorResource(R.color.color_letra_normal) else  colorResource(R.color.black)
+    //Variable para controlar los estilos según el estado de la tarjeta
+    val estiloCard = if(tarea.completado) colorResource(R.color.color_tarjeta)
+    else Color.Transparent
+
+    val estiloTexto = if(tarea.completado)  colorResource(R.color.color_letra_normal)
+    else  colorResource(R.color.black)
 
     Card(
         modifier = modifier
