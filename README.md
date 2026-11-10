@@ -32,13 +32,12 @@ El proyecto está modularizado siguiendo los estándares de la arquitectura MVVM
 El proyecto cuenta con integración en **Firebase App Distribution**. La aplicación ha sido empaquetada y firmada como un `APK` de lanzamiento (`release`), permitiendo la distribución ágil a *testers* directamente desde la consola de Firebase sin necesidad de pasar por Google Play.
 
 ## 📱 Capturas de Pantalla
-*(Añade aquí un par de capturas de pantalla de tu emulador mostrando las tareas pendientes y completadas)*
 
 <div align="center">
-  <img src="ruta_a_tu_imagen_1.png" width="250" />
+  <img src="imagen1.png" width="250" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="ruta_a_tu_imagen_2.png" width="250" />
+  <img src="imagen2.png" width="250" />
 </div>
 
 ---
-**Autor:** Sebastian Eduardo Vargas Mariño[cite: 5]
+**Autor:** Sebastian Eduardo Vargas Mariño
